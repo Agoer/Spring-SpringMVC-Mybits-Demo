@@ -1,0 +1,3 @@
+此项目为maven结构
+整合 springmvc spring mybatis
+测试请求路径 user/showUser（详解请关注springmvc）
