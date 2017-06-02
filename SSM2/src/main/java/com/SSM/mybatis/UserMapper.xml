@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <!-- 与此映射文件对应的dao接口 -->
-<mapper namespace="com.jimmy.SSM.dao.UserDao" >
-  <resultMap id="user" type="com.jimmy.SSM.domain.User" >
+<mapper namespace="com.SSM.dao.UserDao" >
+  <resultMap id="user" type="com.SSM.domain.User" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="user_name" property="userName" jdbcType="VARCHAR" />
     <result column="password" property="password" jdbcType="VARCHAR" />
@@ -22,13 +22,13 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
 <!--   可以将parameterType换成parameterMap=""值为上面定义好的如user -->
-  <insert id="insert" parameterType="com.jimmy.SSM.domain.User" >
+  <insert id="insert" parameterType="com.SSM.domain.User" >
     insert into user_t (id, user_name, password, 
       age)
     values (#{id,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
       #{age,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="com.jimmy.SSM.domain.User" >
+  <insert id="insertSelective" parameterType="com.SSM.domain.User" >
     insert into user_t
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -59,7 +59,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.jimmy.SSM.domain.User" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.SSM.domain.User" >
     update user_t
     <set >
       <if test="userName != null" >
@@ -74,7 +74,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.jimmy.SSM.domain.User" >
+  <update id="updateByPrimaryKey" parameterType="com.SSM.domain.User" >
     update user_t
     set user_name = #{userName,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},

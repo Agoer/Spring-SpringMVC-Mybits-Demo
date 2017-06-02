@@ -1,6 +1,6 @@
-package com.jimmy.SSM.dao;
+package com.SSM.dao;
 
-import com.jimmy.SSM.domain.User;
+import com.SSM.domain.User;
 
 
 public interface UserDao {

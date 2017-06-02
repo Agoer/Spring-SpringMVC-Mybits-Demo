@@ -1,12 +1,12 @@
-package com.jimmy.SSM.service.impl;
+package com.SSM.service.impl;
 
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-import com.jimmy.SSM.dao.UserDao;
-import com.jimmy.SSM.domain.User;
-import com.jimmy.SSM.service.UserService;
+import com.SSM.dao.UserDao;
+import com.SSM.domain.User;
+import com.SSM.service.UserService;
 @Service("userService")
 public class UserServiceImpl implements UserService {
 

@@ -1,6 +1,6 @@
-package com.jimmy.SSM.service;
+package com.SSM.service;
 
-import com.jimmy.SSM.domain.User;
+import com.SSM.domain.User;
 
 
 public interface UserService {

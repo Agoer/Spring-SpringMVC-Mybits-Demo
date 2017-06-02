@@ -1,0 +1,5 @@
+com\SSM\service\impl\UserServiceImpl.class
+com\SSM\controller\UserController.class
+com\SSM\service\UserService.class
+com\SSM\domain\User.class
+com\SSM\dao\UserDao.class

@@ -1,4 +1,4 @@
-package com.jimmy.SSM.domain;
+package com.SSM.domain;
 
 public class User {
 

@@ -1,4 +1,4 @@
-package com.jimmy.SSM.controller;
+package com.SSM.controller;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -7,8 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.jimmy.SSM.domain.User;
-import com.jimmy.SSM.service.UserService;
+import com.SSM.domain.User;
+import com.SSM.service.UserService;
 
 
 @Controller
