@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.SSM.common.SSMCommon;
 import com.SSM.domain.User;
 import com.SSM.service.UserService;
 
@@ -42,6 +43,11 @@ public class UserController {
 		user.setAge(20);
 		userService.addNewUser(user);
 		model.addAttribute("user", user);
+		
+		//获取用户IP
+        String ip = SSMCommon.getInstance().getRealUserIP(request);
+        
+		System.out.println("当前访问的IP:" + ip);
 		return "/success";
 	}
 	

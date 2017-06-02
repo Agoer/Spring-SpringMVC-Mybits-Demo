@@ -18,7 +18,6 @@ public class UserServiceImpl implements UserService {
 	}
 	@Override
 	public void addNewUser(User user) {
-		// TODO Auto-generated method stub
 		int ret = userDao.insert(user);
 		if(ret == 1){
 			System.out.println("新增用户成功！");
