@@ -6,4 +6,6 @@ import com.SSM.domain.User;
 public interface UserService {
 
 	public User getUserById(int userId);
+	
+	public void addNewUser(User user);
 }

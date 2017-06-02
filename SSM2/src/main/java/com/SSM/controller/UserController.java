@@ -2,6 +2,7 @@ package com.SSM.controller;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,7 +23,26 @@ public class UserController {
 		int userId =1; 
 				//Integer.parseInt(request.getParameter("id"));
 		User user = this.userService.getUserById(userId);
+		HttpSession session = request.getSession();
+		session.setAttribute("user", user);
 		model.addAttribute("user", user);
 		return "showUser";
 	}
+	
+	@RequestMapping("/addUser")
+	public String addNewUser(HttpServletRequest request,Model model){
+		
+		String name = request.getParameter("username");
+		String pwd = request.getParameter("password");
+		
+		User user = new User();
+		user.setId(3);
+		user.setUserName(name);
+		user.setPassword(pwd);
+		user.setAge(20);
+		userService.addNewUser(user);
+		model.addAttribute("user", user);
+		return "/success";
+	}
+	
 }

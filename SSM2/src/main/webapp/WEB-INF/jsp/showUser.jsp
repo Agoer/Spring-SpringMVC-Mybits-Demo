@@ -6,6 +6,7 @@
   </head>
   
   <body>
-    ${user.userName}
+    111111111111${user.userName}
+    ${sessionScope.user.userName}
   </body>
 </html>
