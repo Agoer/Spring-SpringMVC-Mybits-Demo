@@ -47,7 +47,7 @@ public class UserController {
 		//获取用户IP
         String ip = SSMCommon.getInstance().getRealUserIP(request);
         
-		System.out.println("当前访问的IP:" + ip);
+		System.out.println("当前访问的IP：" + ip);
 		return "/success";
 	}
 	
